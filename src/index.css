@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-cinzel: 'Cinzel', serif;
+
+  --color-brand-green-900: #0f261c;
+  --color-brand-green-800: #1b392a;
+  --color-brand-green-700: #264a38;
+  --color-brand-green-600: #335d47;
+  --color-brand-green-100: #e2ece6;
+
+  --color-brand-orange-500: #ea7327;
+  --color-brand-orange-600: #d86219;
+  --color-brand-orange-100: #fdeee5;
+
+  --color-cream-50: #faf8f4;
+  --color-cream-100: #f6f4ee;
+  --color-cream-200: #ede8dc;
+  --color-cream-300: #dfd8c7;
+}
+
+:root {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  color-scheme: light;
+}
+
+body {
+  background-color: #f6f4ee;
+  color: #1e2420;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism helpers */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-pill-dark {
+  background: rgba(27, 57, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Organic curve shapes */
+.hero-curve-top-left {
+  border-bottom-right-radius: 60px;
+}
+
+.hero-curve-bottom-left {
+  border-top-right-radius: 60px;
+}
+
+.hero-curve-bottom-right {
+  border-top-left-radius: 60px;
+}
+
+/* Hide scrollbar for category pills scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth transitions */
+* {
+  box-sizing: border-box;
+}
+
