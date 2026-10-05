@@ -173,51 +173,54 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* POMAII-STYLE HERO SECTION WITH ORGANIC CURVES */}
       {/* ========================================================= */}
-      <section className="relative w-full pt-24 pb-16 lg:pt-28 lg:pb-24 overflow-hidden px-4 sm:px-6 lg:px-10">
-        <div className="max-w-7xl mx-auto relative z-10">
+      {/* ========================================================= */}
+      {/* POMAII-STYLE FULL SCREEN HERO SECTION WITH ORGANIC CURVES */}
+      {/* ========================================================= */}
+      <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden">
+        
+        {/* Full-Screen Hero Container */}
+        <div className="relative w-full flex-grow min-h-screen flex flex-col justify-between p-6 sm:p-12 lg:p-16 pt-28 sm:pt-32 lg:pt-36">
           
-          {/* Main Hero Container with Curved Frame */}
-          <div className="relative rounded-[36px] lg:rounded-[48px] overflow-hidden min-h-[520px] sm:min-h-[580px] lg:min-h-[620px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 shadow-2xl">
-            
-            {/* Scenic High-Res Hero Image */}
-            <div className="absolute inset-0 z-0">
-              <img
-                src="/assets/paradise-hero.jpg"
-                alt="Paradise Garden Scenic View"
-                className="w-full h-full object-cover object-center scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-stone-950/75 via-stone-950/45 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/40" />
-            </div>
+          {/* Edge-to-Edge Full Screen High-Res Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/assets/paradise-hero.jpg"
+              alt="Paradise Garden Scenic View"
+              className="w-full h-full object-cover object-center scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-stone-950/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-stone-950/40" />
+          </div>
 
-            {/* Organic Soft White/Cream Curved Corner Masks (Pomaii aesthetic) */}
-            <div className="absolute top-0 left-0 w-32 h-32 sm:w-48 sm:h-48 bg-[#f6f4ee] hero-curve-top-left z-10 pointer-events-none opacity-90 hidden sm:block">
-              <div className="p-4">
-                <div className="w-3 h-3 rounded-full bg-[#ea7327] opacity-60" />
-              </div>
+          {/* Organic Soft White/Cream Curved Corner Masks */}
+          <div className="absolute top-0 left-0 w-36 h-36 sm:w-56 sm:h-56 bg-[#f6f4ee] hero-curve-top-left z-10 pointer-events-none opacity-90 hidden sm:block">
+            <div className="p-5">
+              <div className="w-3.5 h-3.5 rounded-full bg-[#ea7327] opacity-70" />
             </div>
-            <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#f6f4ee] hero-curve-bottom-right z-10 pointer-events-none opacity-90 hidden sm:block" />
+          </div>
+          <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 bg-[#f6f4ee] hero-curve-bottom-right z-10 pointer-events-none opacity-90 hidden sm:block" />
 
-            {/* Top Tagline Badge */}
-            <div className="relative z-20">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold tracking-widest text-white uppercase bg-white/20 backdrop-blur-md border border-white/30 shadow-md"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                <span>EXPLORE THE PARADISE</span>
-              </motion.div>
-            </div>
+          {/* Top Tagline Badge */}
+          <div className="relative z-20 max-w-7xl mx-auto w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold tracking-widest text-white uppercase bg-white/20 backdrop-blur-md border border-white/30 shadow-md"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <span>EXPLORE THE PARADISE</span>
+            </motion.div>
+          </div>
 
-            {/* Main Headline & CTA */}
-            <div className="relative z-20 max-w-2xl my-auto py-8">
+          {/* Main Headline & CTA */}
+          <div className="relative z-20 max-w-7xl mx-auto w-full my-auto py-8 text-left">
+            <div className="max-w-2xl">
               <motion.h1
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="font-['Outfit',sans-serif] text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] drop-shadow-lg"
+                className="font-['Outfit',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] drop-shadow-lg"
               >
                 Discover Nature. <br />
                 <span className="text-[#ea7327]">Find Your Escape.</span>
@@ -227,7 +230,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-stone-200 text-sm sm:text-base lg:text-lg font-normal mt-4 max-w-lg leading-relaxed drop-shadow"
+                className="text-stone-200 text-base sm:text-lg lg:text-xl font-normal mt-5 max-w-lg leading-relaxed drop-shadow"
               >
                 Breathtaking marriage lawns, royal AC banquets & unforgettable experiences, crafted just for you in Dhanbad.
               </motion.p>
@@ -236,28 +239,28 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="mt-6 sm:mt-8 flex items-center gap-4"
+                className="mt-8 flex items-center gap-4"
               >
                 <Link to="/venues">
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 15px 30px -5px rgba(234, 115, 39, 0.45)" }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-7 py-3.5 rounded-full text-sm font-bold text-white bg-[#ea7327] hover:bg-[#d86219] shadow-xl transition-all inline-flex items-center gap-2 cursor-pointer"
+                    className="px-8 py-4 rounded-full text-base font-bold text-white bg-[#ea7327] hover:bg-[#d86219] shadow-xl transition-all inline-flex items-center gap-2 cursor-pointer"
                   >
                     <span>Explore Venues</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </Link>
               </motion.div>
             </div>
-
-            <div />
           </div>
 
-          {/* ========================================================= */}
-          {/* FLOATING BOOKING & SEARCH FILTER BAR (Overlaps Hero) */}
-          {/* ========================================================= */}
-          <div className="relative z-30 -mt-12 sm:-mt-16 max-w-5xl mx-auto px-2">
+          {/* Bottom padding for search bar overlap */}
+          <div className="pb-16 sm:pb-20" />
+        </div>
+
+        {/* FLOATING BOOKING & SEARCH FILTER BAR */}
+        <div className="relative z-30 -mt-20 sm:-mt-24 max-w-5xl mx-auto px-4 w-full pb-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -356,7 +359,6 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-        </div>
       </section>
 
       {/* ========================================================= */}
