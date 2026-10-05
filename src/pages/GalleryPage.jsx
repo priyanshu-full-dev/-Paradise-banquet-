@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn } from 'lucide-react';
+import { X, ZoomIn, Camera } from 'lucide-react';
 
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -29,19 +29,24 @@ export default function GalleryPage() {
     : galleryImages.filter(img => img.category === activeFilter);
 
   return (
-    <div className="w-full pt-28 pb-20 px-6 lg:px-16 bg-parchment-pattern">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full pt-28 pb-20 px-4 sm:px-6 lg:px-12 bg-[#f7f2e7] min-h-screen text-[#2a1e17]">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Page Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="text-center max-w-3xl mx-auto mb-12"
         >
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#88551b]">Moments & Memories</span>
-          <h1 className="font-['Cinzel',serif] text-3xl sm:text-4xl md:text-5xl text-[#33261d] font-bold mt-2">
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#c59127]/15 text-[#7f0000] border border-[#c59127]/30 mb-4">
+            <Camera className="w-3.5 h-3.5 text-[#c59127]" />
+            MOMENTS & MEMORIES
+          </span>
+          <h1 className="font-['Outfit',sans-serif] text-3xl sm:text-5xl font-extrabold text-[#7f0000] tracking-tight">
             Paradise Garden Photo Gallery
           </h1>
-          <p className="text-sm text-[#5a483a] mt-2">
+          <p className="text-sm sm:text-base text-stone-600 mt-3 leading-relaxed">
             Explore authentic photos of grand marriages, mandaps, AC banquets, and poolside Haldi ceremonies in Dhanbad.
           </p>
         </motion.div>
@@ -54,10 +59,10 @@ export default function GalleryPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveFilter(cat.id)}
-              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeFilter === cat.id 
-                  ? 'bg-gradient-to-r from-[#edd9aa] via-[#d4a342] to-[#b88220] text-[#2d1e0f] shadow-md font-bold' 
-                  : 'bg-[#f3ebd7] text-[#5a483a] hover:bg-[#edd9aa]/60'
+                  ? 'bg-[#7f0000] text-white shadow-md' 
+                  : 'bg-white/80 text-stone-700 hover:bg-stone-200 border border-stone-300/60'
               }`}
             >
               {cat.label}
@@ -65,7 +70,7 @@ export default function GalleryPage() {
           ))}
         </div>
 
-        {/* Gallery Grid with layout animation */}
+        {/* Gallery Grid */}
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredImages.map((img) => (
@@ -89,7 +94,7 @@ export default function GalleryPage() {
                   <div className="self-end p-2 rounded-full bg-white/20 backdrop-blur-md text-white">
                     <ZoomIn className="w-4 h-4" />
                   </div>
-                  <span className="font-['Cinzel',serif] text-sm text-white font-medium drop-shadow leading-snug">
+                  <span className="font-['Outfit',sans-serif] text-sm text-white font-medium drop-shadow leading-snug">
                     {img.title}
                   </span>
                 </div>
@@ -98,14 +103,14 @@ export default function GalleryPage() {
           </AnimatePresence>
         </motion.div>
 
-        {/* Fullscreen Lightbox Modal */}
+        {/* Lightbox Modal */}
         <AnimatePresence>
           {selectedImg && (
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/92 backdrop-blur-md"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
             >
               <motion.div 
                 initial={{ scale: 0.85 }}
@@ -120,13 +125,14 @@ export default function GalleryPage() {
                   <X className="w-5 h-5" />
                 </button>
                 <img src={selectedImg.src} alt={selectedImg.title} className="w-full max-h-[80vh] object-contain" />
-                <div className="p-4 bg-stone-900 text-center font-['Cinzel',serif] text-sm text-[#edd9aa]">
+                <div className="p-4 bg-stone-900 text-center font-['Outfit',sans-serif] text-sm text-[#f7ecd5]">
                   {selectedImg.title}
                 </div>
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
     </div>
   );

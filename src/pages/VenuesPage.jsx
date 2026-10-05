@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle2, MessageCircle, Users, Layers } from 'lucide-react';
+import { CheckCircle2, MessageCircle, Users, Layers, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function VenuesPage() {
   const venues = [
@@ -12,7 +12,7 @@ export default function VenuesPage() {
       image: '/assets/paradise-lawn.jpg',
       capacity: '500 – 1,200+ Guests',
       area: '25,000+ sq. ft.',
-      tag: 'Grand Weddings',
+      tag: 'Grand Royal Weddings',
       idealFor: 'Royal Weddings, Grand Receptions, Varmala & Sangeet',
       description: 'Dhanbad’s most magnificent open-air landscaped marriage lawn. Features a soaring royal mandap stage, broad carpeted entrance driveway, sparkling festoon canopy lighting, and expansive multi-cuisine dining space.',
       features: [
@@ -65,23 +65,29 @@ export default function VenuesPage() {
   ];
 
   return (
-    <div className="w-full pt-28 pb-20 px-4 sm:px-6 lg:px-12 bg-[#f6f4ee] min-h-screen text-[#1e2420]">
+    <div className="w-full pt-28 pb-20 px-4 sm:px-6 lg:px-12 bg-[#f7f2e7] min-h-screen text-[#2a1e17]">
       <div className="max-w-7xl mx-auto">
+        
+        {/* Page Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-xs font-bold uppercase tracking-widest text-[#ea7327]">DISCOVER OUR SPACES</span>
-          <h1 className="font-['Outfit',sans-serif] text-3xl sm:text-5xl font-extrabold text-[#1b392a] mt-2">
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#c59127]/15 text-[#7f0000] border border-[#c59127]/30 mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#c59127]" />
+            DISCOVER OUR SPACES
+          </span>
+          <h1 className="font-['Outfit',sans-serif] text-3xl sm:text-5xl font-extrabold text-[#7f0000] tracking-tight">
             Venues & Capacity Guide
           </h1>
-          <p className="text-sm text-[#5a483a] mt-3">
-            Explore our world-class event spaces in Dhanbad designed for celebrations of every scale.
+          <p className="text-sm sm:text-base text-stone-600 mt-3 leading-relaxed">
+            Explore Dhanbad’s premier luxury event spaces designed for unforgettable weddings, receptions, and celebrations.
           </p>
         </motion.div>
 
+        {/* Venues Grid */}
         <div className="space-y-16">
           {venues.map((venue, idx) => (
             <motion.div 
@@ -90,38 +96,38 @@ export default function VenuesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-[#faf6ee] rounded-3xl overflow-hidden border border-[#c59127]/35 shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 sm:p-8 lg:p-10"
+              className="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden border border-[#c59127]/35 shadow-xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 sm:p-8 lg:p-10"
             >
-              <div className={`h-80 sm:h-96 rounded-2xl overflow-hidden shadow-lg ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div className={`h-80 sm:h-96 rounded-2xl overflow-hidden shadow-lg relative ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <img src={venue.image} alt={venue.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <div className="absolute top-4 left-4 bg-[#7f0000] text-white text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-lg border border-amber-300/30">
+                  {venue.tag}
+                </div>
               </div>
 
               <div className="space-y-4">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#2d1e0f] bg-gradient-to-r from-[#edd9aa] to-[#d4a342] px-3.5 py-1 rounded-full shadow">
-                  {venue.tag}
-                </span>
-                <h2 className="font-['Cinzel',serif] text-2xl sm:text-3xl font-bold text-[#33261d]">
+                <h2 className="font-['Outfit',sans-serif] text-2xl sm:text-3xl font-bold text-[#7f0000]">
                   {venue.title}
                 </h2>
                 
-                <div className="flex flex-wrap gap-3 text-xs font-semibold text-[#88551b]">
-                  <span className="bg-[#f3ebd7] px-3.5 py-1.5 rounded-xl border border-[#c59127]/30 flex items-center gap-1.5">
-                    <Users className="w-3.5 h-3.5" /> Capacity: {venue.capacity}
+                <div className="flex flex-wrap gap-3 text-xs font-semibold text-[#660808]">
+                  <span className="bg-[#f7ecd5]/80 px-3.5 py-1.5 rounded-xl border border-[#c59127]/40 flex items-center gap-1.5 text-stone-800">
+                    <Users className="w-3.5 h-3.5 text-[#c59127]" /> Capacity: {venue.capacity}
                   </span>
-                  <span className="bg-[#f3ebd7] px-3.5 py-1.5 rounded-xl border border-[#c59127]/30 flex items-center gap-1.5">
-                    <Layers className="w-3.5 h-3.5" /> Area: {venue.area}
+                  <span className="bg-[#f7ecd5]/80 px-3.5 py-1.5 rounded-xl border border-[#c59127]/40 flex items-center gap-1.5 text-stone-800">
+                    <Layers className="w-3.5 h-3.5 text-[#c59127]" /> Area: {venue.area}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#5a483a] leading-relaxed">
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                   {venue.description}
                 </p>
 
                 <div className="pt-2">
-                  <h4 className="text-xs font-bold text-[#33261d] uppercase tracking-wider mb-2.5">Key Inclusions & Specs:</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#4b3c31]">
+                  <h4 className="text-xs font-bold text-[#7f0000] uppercase tracking-wider mb-2.5">Key Inclusions & Specs:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-700">
                     {venue.features.map((feat, fidx) => (
-                      <div key={fidx} className="flex items-center gap-1.5">
+                      <div key={fidx} className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#c59127] shrink-0" />
                         <span>{feat}</span>
                       </div>
@@ -134,16 +140,17 @@ export default function VenuesPage() {
                     <motion.button 
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#2d1e0f] bg-gradient-to-r from-[#edd9aa] via-[#d4a342] to-[#b88220] shadow-md cursor-pointer"
+                      className="px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-[#7f0000] hover:bg-[#660808] shadow-md cursor-pointer flex items-center gap-1.5"
                     >
-                      Inquire This Venue
+                      <span>Inquire This Venue</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </motion.button>
                   </Link>
                   <a 
                     href={`https://wa.me/916202878538?text=${encodeURIComponent(`Hello Paradise Garden Dhanbad, I am inquiring about booking the ${venue.title}. Please provide package rates.`)}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-5 py-2.5 rounded-full text-xs font-semibold uppercase text-emerald-700 bg-emerald-100 hover:bg-emerald-200 transition-all flex items-center gap-1.5"
+                    className="px-5 py-2.5 rounded-full text-xs font-bold uppercase text-emerald-700 bg-emerald-100 hover:bg-emerald-200 transition-all flex items-center gap-1.5"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>WhatsApp</span>
