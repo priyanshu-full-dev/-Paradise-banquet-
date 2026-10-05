@@ -192,13 +192,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-stone-950/40" />
           </div>
 
-          {/* Organic Soft White/Cream Curved Corner Masks */}
-          <div className="absolute top-0 left-0 w-36 h-36 sm:w-56 sm:h-56 bg-[#f6f4ee] hero-curve-top-left z-10 pointer-events-none opacity-90 hidden sm:block">
-            <div className="p-5">
-              <div className="w-3.5 h-3.5 rounded-full bg-[#ea7327] opacity-70" />
-            </div>
-          </div>
-          <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 bg-[#f6f4ee] hero-curve-bottom-right z-10 pointer-events-none opacity-90 hidden sm:block" />
+
 
           {/* Top Tagline Badge */}
           <div className="relative z-20 max-w-7xl mx-auto w-full">
