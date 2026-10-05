@@ -12,13 +12,12 @@ export default function Footer() {
           
           {/* Col 1: Logo & Info */}
           <div className="space-y-4 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full bg-[#c59127] flex items-center justify-center text-white font-bold">
-                P
-              </div>
-              <span className="text-white text-xl font-bold font-['Outfit',sans-serif]">
-                Paradise<span className="text-[#c59127]">Garden</span>
-              </span>
+            <Link to="/" className="inline-block">
+              <img 
+                src="/logo/paradise-garden-logo.png" 
+                alt="Paradise Garden" 
+                className="h-16 sm:h-20 w-auto object-contain drop-shadow-md" 
+              />
             </Link>
             <p className="text-xs text-stone-200 leading-relaxed font-normal">
               Dhanbad’s most distinguished marriage lawn, banquet hall, and celebration resort for royal weddings and milestone moments.

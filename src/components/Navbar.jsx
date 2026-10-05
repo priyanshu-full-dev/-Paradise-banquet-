@@ -40,33 +40,16 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           
-          {/* Left: Brand Logo & Slogan */}
-          <div className="flex items-center gap-3 shrink-0">
-            <Link to="/" className="flex items-center gap-2.5 group focus:outline-none select-none">
-              <motion.div 
-                whileHover={{ rotate: 8, scale: 1.05 }}
-                className="w-10 h-10 rounded-full bg-[#7f0000] flex items-center justify-center text-white shadow-md group-hover:bg-[#c59127] transition-colors"
-              >
-                <img 
-                  src="/logo/paradise-garden-logo.png" 
-                  alt="Logo Icon" 
-                  className="w-8 h-8 object-contain rounded-full" 
-                  onError={(e) => { e.target.style.display = 'none'; }}
-                />
-              </motion.div>
-
-              <div className="flex flex-col">
-                <span className={`font-['Outfit',sans-serif] text-xl font-bold tracking-tight leading-none ${
-                  scrolled ? 'text-[#7f0000]' : 'text-white drop-shadow'
-                }`}>
-                  Paradise<span className="text-[#c59127]">Garden</span>
-                </span>
-                <span className={`text-[10px] tracking-widest font-medium uppercase mt-0.5 ${
-                  scrolled ? 'text-stone-500' : 'text-stone-200 drop-shadow'
-                }`}>
-                  Explore. Celebrate. Discover.
-                </span>
-              </div>
+          {/* Left: Brand Logo */}
+          <div className="flex items-center shrink-0">
+            <Link to="/" className="flex items-center group focus:outline-none select-none">
+              <motion.img 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                src="/logo/paradise-garden-logo.png" 
+                alt="Paradise Garden Logo" 
+                className="h-14 sm:h-16 md:h-20 w-auto object-contain drop-shadow-md py-1" 
+              />
             </Link>
           </div>
 
@@ -212,14 +195,13 @@ export default function Navbar() {
             className="fixed inset-0 z-50 bg-[#1b392a]/95 backdrop-blur-xl flex flex-col justify-between p-6 sm:p-10"
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-9 h-9 rounded-full bg-[#ea7327] flex items-center justify-center text-white font-bold">
-                  P
-                </div>
-                <span className="text-white text-xl font-bold font-['Outfit',sans-serif]">
-                  Paradise<span className="text-[#ea7327]">Garden</span>
-                </span>
-              </div>
+              <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center">
+                <img 
+                  src="/logo/paradise-garden-logo.png" 
+                  alt="Paradise Garden" 
+                  className="h-14 w-auto object-contain drop-shadow-md" 
+                />
+              </Link>
               <button 
                 onClick={() => setMobileMenuOpen(false)}
                 className="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors cursor-pointer"
