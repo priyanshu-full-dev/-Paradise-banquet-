@@ -217,7 +217,7 @@ export default function HomePage() {
                 className="font-['Outfit',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] drop-shadow-lg"
               >
                 Discover Nature. <br />
-                <span className="text-[#ea7327]">Find Your Escape.</span>
+                <span className="text-[#c59127]">Find Your Escape.</span>
               </motion.h1>
 
               <motion.p
@@ -237,9 +237,9 @@ export default function HomePage() {
               >
                 <Link to="/venues">
                   <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 15px 30px -5px rgba(234, 115, 39, 0.45)" }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 15px 30px -5px rgba(197, 145, 39, 0.45)" }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 rounded-full text-base font-bold text-white bg-[#ea7327] hover:bg-[#d86219] shadow-xl transition-all inline-flex items-center gap-2 cursor-pointer"
+                    className="px-8 py-4 rounded-full text-base font-bold text-white bg-[#7f0000] hover:bg-[#660808] shadow-xl transition-all inline-flex items-center gap-2 cursor-pointer"
                   >
                     <span>Explore Venues</span>
                     <ArrowRight className="w-5 h-5" />
@@ -263,7 +263,7 @@ export default function HomePage() {
             >
               {/* Field 1: Where to? */}
               <div className="flex items-center gap-3 px-4 py-2 border-b sm:border-b-0 sm:border-r border-stone-200/80">
-                <div className="p-2 rounded-full bg-emerald-50 text-[#1b392a]">
+                <div className="p-2 rounded-full bg-rose-50 text-[#7f0000]">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col text-left w-full">
@@ -284,7 +284,7 @@ export default function HomePage() {
 
               {/* Field 2: Check in Date */}
               <div className="flex items-center gap-3 px-4 py-2 border-b sm:border-b-0 sm:border-r border-stone-200/80">
-                <div className="p-2 rounded-full bg-emerald-50 text-[#1b392a]">
+                <div className="p-2 rounded-full bg-rose-50 text-[#7f0000]">
                   <Calendar className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col text-left w-full">
@@ -303,7 +303,7 @@ export default function HomePage() {
 
               {/* Field 3: Check out / Slot */}
               <div className="flex items-center gap-3 px-4 py-2 border-b sm:border-b-0 sm:border-r border-stone-200/80">
-                <div className="p-2 rounded-full bg-emerald-50 text-[#1b392a]">
+                <div className="p-2 rounded-full bg-rose-50 text-[#7f0000]">
                   <Clock className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col text-left w-full">
@@ -318,7 +318,7 @@ export default function HomePage() {
 
               {/* Field 4: Guests / Capacity */}
               <div className="flex items-center gap-3 px-4 py-2 sm:border-r lg:border-r-0 border-stone-200/80">
-                <div className="p-2 rounded-full bg-emerald-50 text-[#1b392a]">
+                <div className="p-2 rounded-full bg-rose-50 text-[#7f0000]">
                   <Users className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col text-left w-full">
@@ -342,7 +342,7 @@ export default function HomePage() {
                   <motion.button
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
-                    className="w-full py-3.5 px-6 rounded-full bg-[#1b392a] hover:bg-[#12291d] text-white text-xs font-bold tracking-wide flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+                    className="w-full py-3.5 px-6 rounded-full bg-[#7f0000] hover:bg-[#660808] text-white text-xs font-bold tracking-wide flex items-center justify-center gap-2 shadow-lg cursor-pointer"
                   >
                     <span>Search</span>
                     <Search className="w-4 h-4" />
@@ -364,8 +364,8 @@ export default function HomePage() {
             const Icon = item.icon;
             return (
               <div key={idx} className="flex items-center gap-4 text-left">
-                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center text-[#1b392a] shrink-0 border border-stone-200/60">
-                  <Icon className="w-5 h-5 text-[#1b392a]" />
+                <div className="w-12 h-12 rounded-full bg-rose-50 flex items-center justify-center text-[#7f0000] shrink-0 border border-rose-100">
+                  <Icon className="w-5 h-5 text-[#7f0000]" />
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold text-stone-800 leading-tight">
@@ -390,10 +390,10 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-[#ea7327] tracking-widest uppercase">DISCOVER SPACES</span>
-              <span className="text-base">🌿</span>
+              <span className="text-xs font-bold text-[#c59127] tracking-widest uppercase">DISCOVER SPACES</span>
+              <span className="text-base">✨</span>
             </div>
-            <h2 className="font-['Outfit',sans-serif] text-2xl sm:text-4xl font-extrabold text-[#1b392a] tracking-tight mt-1">
+            <h2 className="font-['Outfit',sans-serif] text-2xl sm:text-4xl font-extrabold text-[#7f0000] tracking-tight mt-1">
               Popular Destinations & Venues
             </h2>
           </div>
@@ -401,7 +401,7 @@ export default function HomePage() {
           <Link to="/venues">
             <motion.button
               whileHover={{ x: 4 }}
-              className="inline-flex items-center gap-2 text-xs font-bold text-stone-700 hover:text-[#ea7327] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 text-xs font-bold text-stone-700 hover:text-[#7f0000] transition-colors cursor-pointer"
             >
               <span>View All Destinations</span>
               <ArrowRight className="w-4 h-4" />
@@ -420,7 +420,7 @@ export default function HomePage() {
                 onClick={() => setActiveCategory(cat.name)}
                 className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-[#1b392a] text-white shadow-md'
+                    ? 'bg-[#7f0000] text-white shadow-md'
                     : 'bg-white text-stone-700 hover:bg-stone-200/70 border border-stone-200/80'
                 }`}
               >
@@ -462,7 +462,7 @@ export default function HomePage() {
 
                 <button 
                   onClick={() => setSelectedVenue(venue)}
-                  className="p-2 rounded-full bg-white/20 backdrop-blur-md text-white hover:bg-white hover:text-[#ea7327] transition-colors"
+                  className="p-2 rounded-full bg-white/20 backdrop-blur-md text-white hover:bg-white hover:text-[#7f0000] transition-colors"
                 >
                   <Heart className="w-4 h-4" />
                 </button>
@@ -478,13 +478,13 @@ export default function HomePage() {
                 </p>
 
                 <div className="mt-4 pt-3 border-t border-white/20 flex items-center justify-between">
-                  <span className="text-sm font-extrabold text-[#ea7327] bg-white/95 backdrop-blur-md px-3 py-1 rounded-full">
+                  <span className="text-sm font-extrabold text-[#c59127] bg-white/95 backdrop-blur-md px-3 py-1 rounded-full">
                     {venue.price}
                   </span>
                   
                   <button
                     onClick={() => setSelectedVenue(venue)}
-                    className="p-2 rounded-full bg-[#1b392a] text-white hover:bg-[#ea7327] transition-colors"
+                    className="p-2 rounded-full bg-[#7f0000] text-white hover:bg-[#c59127] transition-colors"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -500,12 +500,12 @@ export default function HomePage() {
       {/* POMAII TRAVEL STORIES & GUIDES SECTION */}
       {/* ========================================================= */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
-        <div className="bg-[#ede8dc]/60 rounded-3xl p-6 sm:p-10 border border-stone-200/80 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative overflow-hidden">
+        <div className="bg-[#ede4d0]/60 rounded-3xl p-6 sm:p-10 border border-stone-200/80 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative overflow-hidden">
           
           {/* Left Text */}
           <div className="text-left">
             <span className="text-xs font-bold text-stone-500 uppercase tracking-widest">NEED INSPIRATION?</span>
-            <h3 className="font-['Outfit',sans-serif] text-2xl sm:text-3xl font-extrabold text-[#1b392a] mt-1 leading-tight">
+            <h3 className="font-['Outfit',sans-serif] text-2xl sm:text-3xl font-extrabold text-[#7f0000] mt-1 leading-tight">
               Event Stories & Guides
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 font-medium mt-3 leading-relaxed">
@@ -516,7 +516,7 @@ export default function HomePage() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
-                className="px-6 py-3 rounded-full text-xs font-bold text-white bg-[#1b392a] hover:bg-[#12281e] shadow-md inline-flex items-center gap-2"
+                className="px-6 py-3 rounded-full text-xs font-bold text-white bg-[#7f0000] hover:bg-[#660808] shadow-md inline-flex items-center gap-2"
               >
                 <span>Read Event Stories</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -557,7 +557,7 @@ export default function HomePage() {
       {/* POMAII SPECIAL OFFER HERO BANNER */}
       {/* ========================================================= */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-20">
-        <div className="bg-[#1b392a] text-white rounded-[36px] overflow-hidden shadow-2xl relative p-8 sm:p-12 border border-emerald-900/40 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-[#660808] text-white rounded-[36px] overflow-hidden shadow-2xl relative p-8 sm:p-12 border border-rose-950/40 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           
           {/* Left Image Frame */}
           <div className="h-64 sm:h-80 rounded-2xl overflow-hidden relative shadow-lg">
@@ -571,16 +571,16 @@ export default function HomePage() {
 
           {/* Right Banner Content */}
           <div className="text-left relative z-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-900/80 text-amber-300 text-xs font-bold border border-emerald-700/50 mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>SPECIAL OFFER 🌿</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#7f0000] text-amber-300 text-xs font-bold border border-rose-800/50 mb-4">
+              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <span>SPECIAL OFFER ✨</span>
             </div>
 
             <h2 className="font-['Outfit',sans-serif] text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
               Your Next Adventure Starts Here
             </h2>
 
-            <p className="text-emerald-100 text-xs sm:text-sm font-normal mt-4 leading-relaxed max-w-md">
+            <p className="text-rose-100 text-xs sm:text-sm font-normal mt-4 leading-relaxed max-w-md">
               Exclusive wedding packages. Flexible bookings. Memories that last a lifetime in Dhanbad.
             </p>
 
@@ -589,7 +589,7 @@ export default function HomePage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-7 py-3.5 rounded-full text-xs font-bold text-white bg-[#ea7327] hover:bg-[#d86219] shadow-xl inline-flex items-center gap-2"
+                  className="px-7 py-3.5 rounded-full text-xs font-bold text-[#420505] bg-[#c59127] hover:bg-[#d4a342] shadow-xl inline-flex items-center gap-2"
                 >
                   <span>Discover Packages</span>
                   <ArrowRight className="w-4 h-4" />
@@ -627,16 +627,16 @@ export default function HomePage() {
 
               <div className="h-56 rounded-2xl overflow-hidden mb-6 relative">
                 <img src={selectedVenue.image} alt={selectedVenue.title} className="w-full h-full object-cover" />
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#ea7327] text-white text-xs font-bold">
+                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#7f0000] text-white text-xs font-bold">
                   {selectedVenue.tag}
                 </span>
               </div>
 
-              <h3 className="font-['Outfit',sans-serif] text-2xl font-bold text-[#1b392a]">
+              <h3 className="font-['Outfit',sans-serif] text-2xl font-bold text-[#7f0000]">
                 {selectedVenue.title}
               </h3>
               <p className="text-xs text-stone-500 font-medium mt-1 flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5 text-[#ea7327]" />
+                <MapPin className="w-3.5 h-3.5 text-[#c59127]" />
                 <span>{selectedVenue.location} • {selectedVenue.capacity}</span>
               </p>
 
@@ -649,7 +649,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {selectedVenue.features.map((feat, i) => (
                     <div key={i} className="flex items-center gap-2 text-xs text-stone-700 font-medium">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#7f0000] shrink-0" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -657,12 +657,12 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8 flex items-center justify-between">
-                <span className="text-lg font-extrabold text-[#ea7327]">
+                <span className="text-lg font-extrabold text-[#c59127]">
                   {selectedVenue.price}
                 </span>
 
                 <Link to="/contact" onClick={() => setSelectedVenue(null)}>
-                  <button className="px-6 py-3 rounded-full text-xs font-bold text-white bg-[#1b392a] hover:bg-[#ea7327] transition-colors">
+                  <button className="px-6 py-3 rounded-full text-xs font-bold text-white bg-[#7f0000] hover:bg-[#660808] transition-colors">
                     Inquire Booking Now
                   </button>
                 </Link>

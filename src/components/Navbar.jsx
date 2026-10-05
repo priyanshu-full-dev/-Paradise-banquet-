@@ -45,22 +45,21 @@ export default function Navbar() {
             <Link to="/" className="flex items-center gap-2.5 group focus:outline-none select-none">
               <motion.div 
                 whileHover={{ rotate: 8, scale: 1.05 }}
-                className="w-10 h-10 rounded-full bg-[#1b392a] flex items-center justify-center text-white shadow-md group-hover:bg-[#ea7327] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#7f0000] flex items-center justify-center text-white shadow-md group-hover:bg-[#c59127] transition-colors"
               >
                 <img 
                   src="/logo/paradise-garden-logo.png" 
                   alt="Logo Icon" 
-                  className="w-7 h-7 object-contain rounded-full" 
+                  className="w-8 h-8 object-contain rounded-full" 
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />
-                <Sparkles className="w-5 h-5 text-amber-300 hidden" />
               </motion.div>
 
               <div className="flex flex-col">
                 <span className={`font-['Outfit',sans-serif] text-xl font-bold tracking-tight leading-none ${
-                  scrolled ? 'text-[#1b392a]' : 'text-white drop-shadow'
+                  scrolled ? 'text-[#7f0000]' : 'text-white drop-shadow'
                 }`}>
-                  Paradise<span className="text-[#ea7327]">Garden</span>
+                  Paradise<span className="text-[#c59127]">Garden</span>
                 </span>
                 <span className={`text-[10px] tracking-widest font-medium uppercase mt-0.5 ${
                   scrolled ? 'text-stone-500' : 'text-stone-200 drop-shadow'
@@ -82,10 +81,10 @@ export default function Navbar() {
                   className={`relative text-xs xl:text-[13px] font-semibold tracking-wide px-4 py-2 rounded-full transition-all duration-200 focus:outline-none select-none ${
                     isActive
                       ? scrolled 
-                        ? 'text-[#ea7327] bg-[#ea7327]/10 font-bold'
+                        ? 'text-[#7f0000] bg-[#7f0000]/10 font-bold'
                         : 'text-white bg-white/20 font-bold backdrop-blur-md border border-white/30'
                       : scrolled
-                        ? 'text-stone-700 hover:text-[#1b392a] hover:bg-stone-100'
+                        ? 'text-stone-700 hover:text-[#7f0000] hover:bg-stone-100'
                         : 'text-white/90 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -93,7 +92,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.div
                       layoutId="activeTabUnderline"
-                      className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#ea7327] rounded-full"
+                      className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#c59127] rounded-full"
                     />
                   )}
                 </Link>
@@ -139,20 +138,20 @@ export default function Navbar() {
               href="tel:+916202878538"
               className={`hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
                 scrolled 
-                  ? 'text-[#1b392a] bg-emerald-50 hover:bg-emerald-100 border border-emerald-200' 
+                  ? 'text-[#7f0000] bg-rose-50 hover:bg-rose-100 border border-rose-200' 
                   : 'text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/20'
               }`}
             >
-              <Phone className="w-3.5 h-3.5 text-[#ea7327]" />
+              <Phone className="w-3.5 h-3.5 text-[#c59127]" />
               <span>+91 62028 78538</span>
             </motion.a>
 
-            {/* Primary Action Button (Tangerine Orange Pill) */}
+            {/* Primary Action Button (Royal Maroon / Gold Pill) */}
             <Link to="/contact" className="focus:outline-none select-none shrink-0">
               <motion.button 
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(234, 115, 39, 0.4)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(127, 0, 0, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide text-white bg-[#ea7327] hover:bg-[#d86219] shadow-md transition-all cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide text-white bg-[#7f0000] hover:bg-[#660808] shadow-md transition-all cursor-pointer whitespace-nowrap"
               >
                 <span>Book Now</span>
                 <ArrowRight className="w-3.5 h-3.5" />
